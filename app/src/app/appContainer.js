@@ -12,13 +12,8 @@ import {Image, Platform} from 'react-native';
 
 import {AppContext} from './app';
 
-import Items from '../items/items';
-import ItemDetails from '../items/itemDetails';
-
 import Phones from '../phones/phones';
 import PhoneDetails from '../phones/phoneDetails';
-
-import Photos from '../photos/photos';
 
 import Users from '../users/users';
 import UserAdd from '../users/userAdd';
@@ -44,14 +39,14 @@ const LogOut = () => {
     return null;
 };
 
-const ItemsStack = createStackNavigator();
+const PhonesStack = createStackNavigator();
 
-const ItemsStackScreen = () => {
+const PhoneshStackScreen = () => {
     return (
-        <ItemsStack.Navigator headerMode={'none'}>
-            <ItemsStack.Screen name="Items" component={Items} options={{title: ''}}/>
-            <ItemsStack.Screen name="Details" component={ItemDetails} options={{title: '', headerLeft: null}}/>
-        </ItemsStack.Navigator>
+        <PhonesStack.Navigator headerMode={'none'}>
+            <PhonesStack.Screen name="Items" component={Phones} options={{title: ''}}/>
+            <PhonesStack.Screen name="Details" component={PhoneDetails} options={{title: '', headerLeft: null}}/>
+        </PhonesStack.Navigator>
     );
 };
 
@@ -86,16 +81,6 @@ const AuditStackScreen = () => {
             <AuditStack.Screen name="Audit" component={Audit} options={{title: ''}}/>
             <AuditStack.Screen name="Details" component={AuditDetails} options={{title: '', headerLeft: null}}/>
         </AuditStack.Navigator>
-    );
-};
-
-const PhotosStack = createStackNavigator();
-
-const PhotosStackScreen = () => {
-    return (
-        <PhotosStack.Navigator headerMode={'none'}>
-            <PhotosStack.Screen name="Photos" component={Photos} options={{title: ''}}/>
-        </PhotosStack.Navigator>
     );
 };
 
@@ -162,20 +147,20 @@ const AppContainer = () => {
 
                         if (route.name === 'Phones') {
                             iconName = <Image
-                                source={require('../../img/search.png')}
+                                source={require('../../img/phones.png')}
                                 style={{
-                                    height: 20,
-                                    width: 20,
+                                    height: 15,
+                                    width: 15,
                                     margin: 0,
                                 }}
                             />;
                         }
                         if (route.name === 'Phones' && focused) {
                             iconName = <Image
-                                source={require('../../img/search.png')}
+                                source={require('../../img/phones.png')}
                                 style={{
-                                    height: 25,
-                                    width: 25,
+                                    height: 20,
+                                    width: 20,
                                     margin: 0,
                                 }}
                             />;
@@ -258,12 +243,9 @@ const AppContainer = () => {
                     },
                 })}
             >
-                <Tab.Screen name="Items" component={ItemsStackScreen}/>
-                <Tab.Screen name="Phones" component={SearchStackScreen}/>
+                <Tab.Screen name="Phones" component={PhoneshStackScreen}/>
                 <Tab.Screen name="Audit" component={AuditStackScreen}/>
-                <Tab.Screen name="Photos" component={PhotosStackScreen}/>
                 <Tab.Screen name={name} component={UsersStackScreen}/>
-
                 <Tab.Screen name="Quit" component={LogOut}/>
             </Tab.Navigator>
         </NavigationContainer>

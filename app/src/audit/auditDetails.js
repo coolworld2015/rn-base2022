@@ -39,7 +39,7 @@ const AuditDetails = () => {
                     <TouchableWithoutFeedback>
                         <View>
                             <Text style={styles.textLarge}>
-                                {state.item.name}
+                                {state.item.date}
                             </Text>
                         </View>
                     </TouchableWithoutFeedback>

@@ -143,7 +143,6 @@ const Audit = ({navigation}) => {
                         underlayColor='darkblue'>
                         <View>
                             <Text style={styles.textSmall}>
-                                New
                             </Text>
                         </View>
                     </TouchableHighlight>
@@ -262,7 +261,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
         marginTop: 12,
-        paddingLeft: 20,
+        paddingRight: 20,
         fontWeight: 'bold',
         color: 'white',
     },

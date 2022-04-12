@@ -82,12 +82,12 @@ const Login = () => {
 
                     <View style={styles.headerContainer}>
                         <Text style={styles.heading}>
-                            Gredunov's Collection
+                            RN-Base 2022
                         </Text>
                     </View>
 
                     <Image style={styles.logo}
-                           source={require('../../img/logo.jpg')}
+                           source={require('../../img/logo1.jpg')}
                     />
 
                     <TextInput
