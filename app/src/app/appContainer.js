@@ -244,8 +244,8 @@ const AppContainer = () => {
                 })}
             >
                 <Tab.Screen name="Phones" component={PhoneshStackScreen}/>
-                <Tab.Screen name="Audit" component={AuditStackScreen}/>
                 <Tab.Screen name={name} component={UsersStackScreen}/>
+                <Tab.Screen name="Audit" component={AuditStackScreen}/>
                 <Tab.Screen name="Quit" component={LogOut}/>
             </Tab.Navigator>
         </NavigationContainer>
